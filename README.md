@@ -1,14 +1,14 @@
 # MobileViT
 A PyTorch implementation of MobileViT as presented in the paper ["MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer"](https://arxiv.org/abs/2110.02178).
 
-# Training
+## Training
 Check whether all dependencies are satisfied. This :point_down: will run a random `torch tensor` through the three MobileViT architectures and print their size.
 ```python
 python3 mobilevit.py check
 ```
 
 
-# Citation
+## Citation
 ```
 @article{mehta2021mobilevit,
   title={MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer},
@@ -18,5 +18,5 @@ python3 mobilevit.py check
 }
 ```
 
-# Credits
+## Credits
 Code adopted from [MobileViT-PyTorch](https://github.com/chinhsuanwu/mobilevit-pytorch).
