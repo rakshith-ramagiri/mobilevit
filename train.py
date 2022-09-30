@@ -26,8 +26,8 @@ from rich.console import Console, RenderableType, Group
 from rich.progress import Progress, ProgressColumn, TextColumn, BarColumn, TimeRemainingColumn, SpinnerColumn, track
 
 # custom imports
-from mobilevit import MobileViT
 from helpers import PrettyPrintingHelpers
+from mobilevit import MobileViT, mobilevit_s, mobilevit_xxs, mobilevit_xs, count_parameters
 
 # typer app
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_show_locals=False)
