@@ -77,6 +77,11 @@ This :point_up: will list all the arguments that need to be passed to successful
 
 ![](assets/export.png)
 
+Assuming you followed the tutorial above :point_up:, we can export that model to ONNX format using the command:
+```python
+python3 train.py export -i weights/mobilevit_s_birds400.pth\
+ -d birds400-dataset  -f ONNX --imgsize 256 --model-size S --device CPU 
+```
 
 ## Citation
 ```
