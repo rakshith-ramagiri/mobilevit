@@ -1,13 +1,70 @@
 # MobileViT
 A PyTorch implementation of MobileViT as presented in the paper ["MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer"](https://arxiv.org/abs/2110.02178).
 
-## Training
+
+## Tutorial
+**READ:** [How to Train MobileViT on a Custom Dataset](https://mlbasics.com/train-mobilevit-custom-dataset)
+
+
+## Install Dependencies
+```python
+# install dependencies
+pip3 install 'typer[all]' rich einops matplotlib jupyterlab numpy \
+ipywidgets onnxruntime pillow opencv-python
+ 
+# install pytorch (CUDA 11.6)
+pip3 install torch torchvision torchaudio \
+--extra-index-url https://download.pytorch.org/whl/cu116
+
+# install pytorch (CPU)
+pip3 install torch torchvision torchaudio
+```
+
+## Classifier Training
 Check whether all dependencies are satisfied. This :point_down: will run a random `torch tensor` through the three MobileViT architectures and print their sizees (# of model parameters).
 
 ```python
 python3 train.py check
 ```
+![](assets/check.png)
 
+Before proceeding to train MobileViT on a custom dataset. Ensure the dataset is structured as shown below:
+```treeview
+dataset
+├── test
+│   ├── class_1
+│   │   └── image_1.png
+│   ├── class_2
+│   │   └── image_1.png
+│   └── class_3
+│       └── image_1.png
+├── train
+│   ├── class_1
+│   │   └── image_1.png
+│   ├── class_2
+│   │   └── image_1.png
+│   └── class_3
+│       └── image_1.png
+└── valid
+    ├── class_1
+    │   └── image_1.png
+    ├── class_2
+    │   └── image_1.png
+    └── class_3
+        └── image_1.png
+``` 
+
+To start classification model training, type the following command:
+```python
+python3 train.py train -i <dataset_dir> -s <model_weights_savedir>\
+ --imgsize 256 --batchsize 32 --epochs 100 --model-size XXS/XS/S
+```
+
+To check all available options for training, type the command:
+```python
+python3 train.py train
+```
+This :point_up: will print a help dialog showing all the options that can be configured.
 
 ## Citation
 ```
