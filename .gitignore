@@ -1,6 +1,8 @@
 # added by rakshith
+.venv/
 .idea/
 .sync*
+Pipfile*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
