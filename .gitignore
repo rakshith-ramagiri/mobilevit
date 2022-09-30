@@ -1,4 +1,5 @@
 # added by rakshith
+*.DS_Store*
 .venv/
 .idea/
 .sync*
