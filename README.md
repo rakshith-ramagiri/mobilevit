@@ -66,6 +66,18 @@ python3 train.py train
 ```
 This :point_up: will print a help dialog showing all the options that can be configured.
 
+![](assets/train.png)
+
+## Model Export
+To export trained MobileViT model to ONNX or TorchScript format, type the command:
+```python
+python3 train.py export
+```
+This :point_up: will list all the arguments that need to be passed to successfully export the model to the supported formats.
+
+![](assets/export.png)
+
+
 ## Citation
 ```
 @article{mehta2021mobilevit,
