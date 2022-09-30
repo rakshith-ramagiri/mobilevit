@@ -458,17 +458,28 @@ def train_mobilevit_classification_model(
     Train MobileViT model on a custom dataset.
 
     \b
-    dataset_dir
-    |--- train
-        |--- img_1.png
-        |--- img_2.png
-        |--- ...
-    |--- valid
-        |--- img_1.png
-        |--- img_2.png
-        |--- ...
-    |--- [test] optional
-        ...
+    dataset
+    ├── test
+    │   ├── class_1
+    │   │   └── image_1.png
+    │   ├── class_2
+    │   │   └── image_1.png
+    │   └── class_3
+    │       └── image_1.png
+    ├── train
+    │   ├── class_1
+    │   │   └── image_1.png
+    │   ├── class_2
+    │   │   └── image_1.png
+    │   └── class_3
+    │       └── image_1.png
+    └── valid
+        ├── class_1
+        │   └── image_1.png
+        ├── class_2
+        │   └── image_1.png
+        └── class_3
+            └── image_1.png
     """
 
     # create 'checkpoints_savepath' directory if doesn't already exist
@@ -798,17 +809,28 @@ def export_mobilevit_model_weight(
     Export MobileViT model weights to different supported formats.
 
     \b
-    dataset_dir
-    |--- train
-        |--- img_1.png
-        |--- img_2.png
-        |--- ...
-    |--- valid
-        |--- img_1.png
-        |--- img_2.png
-        |--- ...
-    |--- [test] optional
-        ...
+    dataset
+    ├── test
+    │   ├── class_1
+    │   │   └── image_1.png
+    │   ├── class_2
+    │   │   └── image_1.png
+    │   └── class_3
+    │       └── image_1.png
+    ├── train
+    │   ├── class_1
+    │   │   └── image_1.png
+    │   ├── class_2
+    │   │   └── image_1.png
+    │   └── class_3
+    │       └── image_1.png
+    └── valid
+        ├── class_1
+        │   └── image_1.png
+        ├── class_2
+        │   └── image_1.png
+        └── class_3
+            └── image_1.png
     """
 
     # determine number of classes
