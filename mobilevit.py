@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import torch
 import torch.nn as nn
 from einops import rearrange
